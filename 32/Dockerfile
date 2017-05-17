@@ -5,5 +5,7 @@ RUN dpkg --add-architecture i386 \
 	&& apt-get install -y \
 		wine32 \
 		wine \
-		wine-fonts \
+		fonts-wine \
 	&& rm -rf /var/lib/apt/lists/*
+
+RUN wineboot
